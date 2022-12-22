@@ -1,0 +1,264 @@
+<div class="container">
+    <div class="row">
+        <div class="forn-bg w-50 form1">
+            <form #form1="ngForm" (ngSubmit)="function1(form1)">
+                <h4 class="text-center">Form 1 template deiven form</h4>
+                <br>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" placeholder="first name" name="firstname" ngModel>
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" placeholder="last name" name="lastname" ngModel>
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" placeholder="email" name="email" ngModel>
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" placeholder="phone number" name="phno" ngModel>
+                </div>
+                <div class="text-center my-2">
+                    <button type="submit" class="btn btn-primary" id="submit">submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="forn-bg w-50 form2" >
+            <form #form2="ngForm" (ngSubmit)="function2(form2.value)">
+                <h4 class="text-center">Form 2 template deiven form</h4>
+                <br>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" placeholder="first name" name="firstname" ngModel>
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" placeholder="last name" name="lastname" ngModel>
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" placeholder="email" name="email" ngModel>
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" placeholder="phone number" name="phno" ngModel>
+                </div>
+                <div class="text-center my-2">
+                    <button type="submit" class="btn btn-primary" id="submit2">submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="forn-bg w-50 form3">
+            <form #form3="ngForm" (ngSubmit)="function3(form3)">
+                <h4 class="text-center">Form 3 validate in template deiven</h4>
+                <br>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" placeholder="first name" name="firstname" required ngModel>
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" placeholder="last name" name="lastname" required ngModel>
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" placeholder="email" name="email" required ngModel>
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" placeholder="phone number" name="phno" required ngModel>
+                </div>
+                <div class="text-center my-2">
+                    <button type="submit" class="btn btn-primary" id="submit3" [disabled]="!form3.valid">submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="forn-bg w-50 form4">
+            <form #form4="ngForm" (ngSubmit)="function4(form4.value)">
+                <h4 class="text-center">Form 4 validate in template deiven</h4>
+                <br>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" placeholder="first name" name="firstname" required ngModel>
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" placeholder="last name" name="lastname" required ngModel>
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" placeholder="email" name="email" required ngModel>
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" placeholder="phone number" name="phno" required ngModel>
+                </div>
+                <div class="text-center my-2">
+                    <button type="submit" class="btn btn-primary" id="submit4" [disabled]="!form4.valid">submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <h3 class="bg-secondary text-center my-3 rounded p-1">Reactive Forms</h3>
+    <div class="row">
+        <div class="form-bg w-50 form5">
+            <h4 class="text-center">form 5 reactive form</h4>
+            <form [formGroup]="signupform" (ngSubmit)="function5(signupform)">
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" formControlName="fname5" placeholder="first name">
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" formControlName="lname5" placeholder="last name">
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" formControlName="email5" placeholder="email">
+                </div>
+                <div class="form-group my-2">
+                    <input type="password" class="form-control" formControlName="password5" placeholder="password">
+                </div>
+                <div class="text-center">
+                    <input type="submit" class="btn btn-primary" value="post data">-
+                </div>
+            </form>
+        </div>
+        <div class="form-bg w-50 form6">
+            <h4 class="text-center">form 6 validation in reactive form</h4>
+            <form [formGroup]="signupform2" (ngSubmit)="function6(signupform2)">
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" formControlName="fname6" placeholder="first name">
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" formControlName="lname6" placeholder="last name">
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" formControlName="email6" placeholder="email">
+                </div>
+                <div class="form-group my-2">
+                    <input type="password" class="form-control" formControlName="password6" placeholder="password">
+                </div>
+                <div class="text-center">
+                    <input type="submit" class="btn btn-primary" value="post data" [disabled]="!signupform2.valid">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-bg w-50 form7">
+            <h4 class="text-center">form 7 get value and reset()</h4>
+            <form [formGroup]="signupform3" (ngSubmit)="function7(signupform3)">
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" formControlName="fname7" placeholder="first name">
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" formControlName="lname7" placeholder="last name">
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" formControlName="email7" placeholder="email">
+                </div>
+                <div class="form-group my-2">
+                    <input type="password" class="form-control" formControlName="password7" placeholder="password">
+                </div>
+                <div class="text-center">
+                    <input type="submit" class="btn btn-primary" value="post data">--
+                    <button (click)="getFunction1()" class="btn btn-primary">get name</button>--
+                    <button (click)="resetform1()" class="btn btn-primary">reset</button>--
+                    <button (click)="resetform2()" class="btn btn-primary">reset2</button>
+                </div>
+            </form>
+        </div>
+        <div class="form-bg w-50 form8">
+            <h4 class="text-center">form 8 setvalue()</h4>
+            <form [formGroup]="signupform4" (ngSubmit)="function8(signupform4)">
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" formControlName="fname8" placeholder="first name">
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" formControlName="lname8" placeholder="last name">
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" formControlName="email8" placeholder="email">
+                </div>
+                <div class="form-group my-2">
+                    <input type="password" class="form-control" formControlName="password8" placeholder="password">
+                </div>
+                <div class="text-center">
+                    <input type="submit" class="btn btn-primary" value="post data">-
+                    <button (click)="fillform3()" class="btn btn-primary">click me</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-bg w-50 form9">
+            <h4 class="text-center">form 9  patchvalue()</h4>
+            <form [formGroup]="signupform5" (ngSubmit)="function9(signupform5)">
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" formControlName="fname9" placeholder="first name">
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" formControlName="lname9" placeholder="last name">
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" formControlName="email9" placeholder="email">
+                </div>
+                <div class="form-group my-2">
+                    <input type="password" class="form-control" formControlName="password9" placeholder="password">
+                </div>
+                <div class="text-center">
+                    <input type="submit" class="btn btn-primary" value="post data">-
+                    <button (click)="patchform()" class="btn btn-primary">click me</button>
+                </div>
+            </form>
+        </div>
+        <div class="form-bg w-50 form10">
+            <h4 class="text-center">form 10  valueChanges()</h4>
+            <form [formGroup]="signupform6" (ngSubmit)="function10(signupform6)">
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" formControlName="fname10" placeholder="first name">
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" formControlName="lname10" placeholder="last name">
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" formControlName="email10" placeholder="email">
+                </div>
+                <div class="form-group my-2">
+                    <input type="password" class="form-control" formControlName="password10" placeholder="password">
+                </div>
+                <div class="text-center">
+                    <input type="submit" class="btn btn-primary" value="post data">-
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-bg w-50 form11">
+            <h4 class="text-center">form 11  status()</h4>
+            <form [formGroup]="signupform7" (ngSubmit)="function11(signupform7)">
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" formControlName="fname11" placeholder="first name">
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" formControlName="lname11" placeholder="last name">
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" formControlName="email11" placeholder="email">
+                </div>
+                <div class="form-group my-2">
+                    <input type="password" class="form-control" formControlName="password11" placeholder="password">
+                </div>
+                <div class="text-center">
+                    <input type="submit" class="btn btn-primary" value="post data">-
+                </div>
+            </form>
+        </div>
+        <div class="form-bg w-50 form12">
+            <h4 class="text-center">form 12  status()</h4>
+            <form [formGroup]="signupform8" (ngSubmit)="function12(signupform8)">
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" formControlName="fname12" placeholder="first name">
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" formControlName="lname12" placeholder="last name">
+                </div>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" formControlName="email12" placeholder="email">
+                </div>
+                <div class="form-group my-2">
+                    <input type="password" class="form-control" formControlName="password12" placeholder="password">
+                </div>
+                <div class="text-center">
+                    <input type="submit" class="btn btn-primary" value="post data">-
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

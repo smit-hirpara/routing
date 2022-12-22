@@ -1,0 +1,66 @@
+.form1 {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px 0 0 0;
+}
+.form2 {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 0 10px 0 0;
+}
+.form3 {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 0 0 0 10px;
+}
+.form4 {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 0 0 10px 0;
+}
+.form5 {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px 0 0 0;
+}
+.form6 {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 0 10px 0 0;
+}
+.form7 {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 0 0 0 0;
+}
+.form8 {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 0 0 0 0;
+}
+.form9 {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 0 0 0 10px;
+}
+.form10 {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 0 0 10px 0;
+}
+.form11 {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 0 0 0 0;
+}
+.form12 {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 0 0 0 0;
+}
+input.ng-invalid.ng-touched {
+    border-bottom-color: red;
+}
+input.ng-invalid.ng-touched {
+    border-color: red;
+}

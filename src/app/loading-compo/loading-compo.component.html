@@ -1,0 +1,17 @@
+<p class="bg-info p-3 text-center">loading-compo works!</p>
+<table class="table table-striped">
+  <tr>
+    <th>Id</th>
+    <th>FirstName</th>
+    <th>LastName</th>
+    <th>Class</th>
+    <th>Age</th>
+  </tr>
+  <tr *ngFor="let students of studentsresult">
+    <td>{{students.id}}</td>
+    <td>{{students.firstname}}</td>
+    <td>{{students.lastname}}</td>
+    <td>{{students.class}}</td>
+    <td>{{students.age}}</td>
+  </tr>
+</table>

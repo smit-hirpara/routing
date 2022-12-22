@@ -1,0 +1,48 @@
+.forms {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.header {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.validinput1.ng-touched.ng-invalid {
+    border: 1px solid red;
+}
+
+.validinput2.ng-touched.ng-invalid {
+    border: 1px solid red;
+}
+.validinput2.ng-touched.ng-valid {
+    border: 1px solid green;
+}
+
+.validinput3.ng-touched.ng-invalid {
+    border: 1px solid red;
+}
+.validinput3.ng-touched.ng-valid {
+    border: 1px solid green;
+}
+
+.inputbox4.ng-touched.ng-invalid {
+    border: 1px solid red;
+}
+.inputbox4.ng-touched.ng-valid {
+    border: 1px solid green;
+}
+
+.inputbox6.ng-touched.ng-invalid {
+    border: 1px solid red;
+}
+.inputbox6.ng-touched.ng-valid {
+    border: 1px solid green;
+}
+.inputbox7 {
+    border:  1px solid black;
+    border-radius: 12px;
+}
+ 

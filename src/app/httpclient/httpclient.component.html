@@ -1,0 +1,248 @@
+<h1 class="bg-success p-1 text-center">HttpClient Methods</h1>
+<ol class="bg-primary p-2 text-center">
+    <li class="bg-success p-1 m-1 text-warning">GET method :- get()</li>
+    <li class="bg-success p-1 m-1 text-warning">POST method :- post()</li>
+    <li class="bg-success p-1 m-1 text-warning">PUT method :- put()</li>
+    <li class="bg-success p-1 m-1 text-warning">DELETE method :- delete()</li>
+    <li class="bg-success p-1 m-1 text-warning">HEAD method :- head()</li>
+    <li class="bg-success p-1 m-1 text-warning">JSONP method :- jsonp()</li>
+    <li class="bg-success p-1 m-1 text-warning">OPTIOS method :- options()</li>
+    <li class="bg-success p-1 m-1 text-warning">PATCH method :- patch()</li>
+</ol>
+
+
+<!-- =============================================================
+                httpClient get() method with service
+============================================================== -->
+<!-- <table>
+    <tr>
+        <th colspan="5">httpClient get() method with service</th>
+    </tr>
+    <tr>
+        <th>ID</th>
+        <th>FIRSTNAME</th>
+        <th>LASTNAME</th>
+        <th>CLASS</th>
+        <th>AGE</th>
+    </tr>
+    <tr *ngFor="let students of studentsw7">
+        <td>{{students.id}}</td>
+        <td>{{students.firstname}}</td>
+        <td>{{students.lastname}}</td>
+        <td>{{students.class}}</td>
+        <td>{{students.age}}</td>
+    </tr>
+</table> -->
+
+
+
+<!-- ================================================================
+                httpClient get() method without service 2
+================================================================= -->
+<!-- <table>
+    <tr>
+        <th colspan="5">httpClient get() method without service 2</th>
+    </tr>
+    <tr>
+        <th>POST ID</th>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>BODY</th>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <button (click)="getdata()">getdata</button>
+        </td>
+        <td colspan="2">
+            <button (click)="deletdata()">delet data</button>
+        </td>
+    </tr>
+    <tr *ngFor="let usersdetails of users">
+        <td>{{usersdetails.id}}</td>
+        <td>{{usersdetails.firstname}}</td>
+        <td>{{usersdetails.lastname}}</td>
+        <td>{{usersdetails.class}}</td>
+        <td>{{usersdetails.age}}</td>
+    </tr>
+</table> -->
+
+
+
+<!-- ========================================================================
+                            HttpClient post() method
+========================================================================= -->
+<!-- <form [formGroup]="httpclientform" (ngSubmit)="httpformsubmit()">
+    <p *ngIf="userdata" ngClass="success">Recored saved successfully</p>
+    <table>
+        <tr>
+            <th colspan="2" class="text-center">Post() method Form</th>
+        </tr>
+        <tr>
+            <td>Id :-</td>
+            <td><input type="text"class="form-control" placeholder="enter id" formControlName="id"></td>
+        </tr>
+        <tr>
+            <td>First Name:- </td>
+            <td><input type="text"class="form-control" placeholder="enter first name" formControlName="firstname"></td>
+        </tr>
+        <tr>
+            <td>Last Name:-</td>
+            <td><input type="text"class="form-control" placeholder="enter last name" formControlName="lastname"></td>
+        </tr>
+        <tr>
+            <td>Class:-</td>
+            <td><input type="text"class="form-control" placeholder="enter class" formControlName="class"></td>
+        </tr>
+        <tr>
+            <td>Age:-</td>
+            <td><input type="text"class="form-control" placeholder="enter age" formControlName="age"></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <button [disabled]="httpclientform.invalid" class="btn btn-primary w-100">submit</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<table class="mb-4">
+    <tr>
+        <th class="text-center" colspan="5">Post() method form values</th>
+    </tr>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Class</th>
+        <th>Age</th>
+    </tr>
+    <tr *ngFor="let users of allhttpclientconterol | async">
+        <td>{{users.id}}</td>
+        <td>{{users.firstname}}</td>
+        <td>{{users.lastname}}</td>
+        <td>{{users.class}}</td>
+        <td>{{users.age}}</td>
+    </tr>
+</table> -->
+
+
+<!-- ========================================================================
+                        HttpClient post() and put() method
+========================================================================= -->
+<!-- <p *ngIf="userdata" class="bg-success p-1 text-center">Recored saved successfully</p>
+<form [formGroup]="httpclientform" (ngSubmit)="httpformsubmit()">
+    <table>
+        <tr>
+            <th colspan="2" class="text-center">Post() and Put() method Form</th>
+        </tr>
+        <tr>
+            <td>Id :-</td>
+            <td><input type="text"class="form-control" placeholder="enter id" formControlName="id"></td>
+        </tr>
+        <tr>
+            <td>First Name:- </td>
+            <td><input type="text"class="form-control" placeholder="enter first name" formControlName="firstname"></td>
+        </tr>
+        <tr>
+            <td>Last Name:-</td>
+            <td><input type="text"class="form-control" placeholder="enter last name" formControlName="lastname"></td>
+        </tr>
+        <tr>
+            <td>Class:-</td>
+            <td><input type="text"class="form-control" placeholder="enter class" formControlName="class"></td>
+        </tr>
+        <tr>
+            <td>Age:-</td>
+            <td><input type="text"class="form-control" placeholder="enter age" formControlName="age"></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <button [disabled]="httpclientform.invalid" class="btn btn-primary w-100">submit</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<table class="mb-4">
+    <tr>
+        <th class="text-center" colspan="6">Post() and Put() method form values</th>
+    </tr>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Class</th>
+        <th>Age</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let users of allhttpclientconterol | async">
+        <td>{{users.id}}</td>
+        <td>{{users.firstname}}</td>
+        <td>{{users.lastname}}</td>
+        <td>{{users.class}}</td>
+        <td>{{users.age}}</td>
+        <td><button type="button" (click)="eadithttppostandputform(users.id)">Edit</button></td>
+    </tr>
+</table> -->
+
+
+
+<!-- ========================================================================
+                        HttpClient post() and put(), delete() method
+========================================================================= -->
+<p *ngIf="userdata" class="bg-success p-1 text-center">Recored saved successfully</p>
+<form [formGroup]="httpclientform" (ngSubmit)="httpformsubmit()">
+    <table>
+        <tr>
+            <th colspan="2" class="text-center">Post() and Put() method Form</th>
+        </tr>
+        <tr>
+            <td>Id :-</td>
+            <td><input type="text"class="form-control" placeholder="enter id" formControlName="id"></td>
+        </tr>
+        <tr>
+            <td>First Name:- </td>
+            <td><input type="text"class="form-control" placeholder="enter first name" formControlName="firstname"></td>
+        </tr>
+        <tr>
+            <td>Last Name:-</td>
+            <td><input type="text"class="form-control" placeholder="enter last name" formControlName="lastname"></td>
+        </tr>
+        <tr>
+            <td>Class:-</td>
+            <td><input type="text"class="form-control" placeholder="enter class" formControlName="class"></td>
+        </tr>
+        <tr>
+            <td>Age:-</td>
+            <td><input type="text"class="form-control" placeholder="enter age" formControlName="age"></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <button [disabled]="httpclientform.invalid" class="btn btn-primary w-100">submit</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<table class="mb-4">
+    <tr>
+        <th class="text-center" colspan="6">Post() and Put() method form values</th>
+    </tr>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Class</th>
+        <th>Age</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let users of allhttpclientconterol | async">
+        <td>{{users.id}}</td>
+        <td>{{users.firstname}}</td>
+        <td>{{users.lastname}}</td>
+        <td>{{users.class}}</td>
+        <td>{{users.age}}</td>
+        <td>
+            <button type="button" class="btn btn-primary mx-1" (click)="eadithttppostandputform(users.id)">Edit</button>
+            <button type="button" class="btn btn-primary mx-1" (click)="deletehttppostandputform(users.id)">Delete</button>
+        </td>
+    </tr>
+</table>

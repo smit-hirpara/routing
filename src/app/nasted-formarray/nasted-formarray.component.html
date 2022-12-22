@@ -1,0 +1,71 @@
+<h4 class="text-center p-1">nasted-formarray</h4>
+<div class="row">
+    <div class="form-bg w-50 form1">
+        <form [formGroup]="form1" (ngSubmit)="submit1()">
+            <div formArrayName="contactnos">
+                <div *ngFor="let contct1 of form1.controls.contactnos.controls; index as i" >
+                    <input type="text" [formControlName]="i" placeholder="enter phno no" class="form-control"><br>
+                </div>
+            </div>
+            <button class="btn btn-primary my-1">submit</button>
+        </form>
+        <button (click)="addcontactno()" class="btn btn-primary my-1">add contact</button><br>
+        <button (click)="setpreset()" class="btn btn-primary">set preset</button>
+    </div>
+    <div class="form-bg w-50 form1">
+        <form [formGroup]="form2" (ngSubmit)="submit2()">
+            <div formArrayName="contactnos2">
+                <div *ngFor="let cntact2 of form2.controls.contactnos2.controls; index as i2">
+                    <input type="text" [formControlName]="i2" placeholder="enter phno" class="form-control"><br>
+                </div>
+            </div>
+            <button class="btn btn-primary mt-1">submit</button>
+        </form>
+        <button (click)="addcontactno2()" class="btn btn-primary my-1">ass contact</button><br>
+        <button (click)="setpresent2()" class="btn btn-primary">set pareset</button>
+    </div>
+</div>
+<div class="row">
+    <!-- <form novalidate [formGroup]="forname1" class="w-50">
+        <div class="row">
+            <div class="col-xl-12 form-group marL40">
+                <div style="margin-top: 0px;" formGroupName="itemRows">
+                    <div class="row panel-heading text-bold" style="text-align: center;margin-top: 0px; margin-left: 10px;">Form Details</div>
+                    <ng-container *ngIf="forname1.controls.itemRows !=null">
+                        <div *ngFor="let itemrow of forname1.controls.itemRows.controls; let i=index" [formGroupName]="i">
+                            <div class="row">
+                                <div class="col-md-2 form-group">
+                                    <input matInput placeholder="name" formControlName="Name">
+                                </div>
+                                <div class="col-md-2 form-group">
+                                    <input matInput placeholder="rollno" formControlName="RollNo">
+                                </div>
+                                <div class="col-md-2 form-group">
+                                    <input matInput placeholder="class" formControlName="Class">
+                                </div>
+                                <div class="col-md-2 form-group">
+                                    <input matInput placeholder="mobileNo" formControlName="MobileNo">
+                                </div>
+                                <div class="col-md-2 form-group">
+                                    <button (click)="deleatrow()" class="bnt btn-denger">X</button>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <div class="form-group" style="text-align: right;">
+                        <button (click)="addNewRow()" [disabled]="forname1.invalid" class="btn btn-primary">add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form> -->
+</div>
+<!-- <form #userform="ngForm" (ngSubmit)="onsubmit(userform)">
+    <table>
+        <tr>
+            <td>name:</td>
+            <td><input type="text" name="uname" [ngModel]="user.username" required #uname="ngModel"></td>
+        </tr>
+    </table>
+</form> -->
+

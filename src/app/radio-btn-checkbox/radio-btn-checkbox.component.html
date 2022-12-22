@@ -1,0 +1,42 @@
+
+<form #fname1="ngForm" (ngSubmit)="submitfunction(fname1)">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td>
+                <input type="text" name="uname1" placeholder="enter name" [ngModel]="name1.name" required #name1="ngModel">
+                <div *ngIf="uname1.invalid">
+                    name required.
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>gender:</td>
+            <td>
+                <input type="radio" vlaue="male" name="gender" [ngModel]="user.gender1" required #gender="ngModel">male
+                <input type="radio" vlaue="female" name="gender" [ngModel]="user.gender1" required #gender="ngModel">female
+                <div *ngIf="gender.invalid">gender required.</div>
+            </td>
+        </tr>
+        <tr>
+            <td>married</td>
+            <td>
+                <input type="chackbox" name="married" [ngModel]="user.isMarried">
+            </td>
+        </tr>
+        <tr>
+            <td>accpect t & c</td>
+            <td>
+                <input type="checkbox" name="tc" [ngModel]="user.isTCAccepted" required #tc="ngModel">
+                <div *ngIf="tc.invalid">accpect t & c</div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"
+            ><button>submit</button>
+            <button type="button" (click)="setdefault()">set default</button>
+            <button type="button" (click)="resetform(fname1)">resets</button>
+            </td>
+        </tr>
+    </table>
+</form>

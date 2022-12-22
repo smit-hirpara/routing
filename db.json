@@ -1,0 +1,47 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "smit hirpara",
+      "author": "lore ipsum"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstname": "smit",
+      "lastname": "smit123@test.com",
+      "class": "11th",
+      "age": 17
+    },
+    {
+      "fullname": "smit hirpara",
+      "mobilenumber": "1363424575",
+      "emailaddress": "smit133@test.com",
+      "password": "fsxgh",
+      "id": 2
+    },
+    {
+      "fullname": "pokimno",
+      "mobilenumber": "134551",
+      "emailaddress": "sdsd",
+      "password": "lklkdnflk",
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
